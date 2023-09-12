@@ -1,12 +1,27 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
+  * times_table - it prints the nine times table
+  * Return: void
+  */
+void times_table(void)
 {
-	times_table();
-	return (0);
+	int t, m, result;
+
+	for (t = 0 ; t < 10 ; t++)
+	{
+		for (m = 0 ; m < 10; m++)
+		{
+			result = t * m;
+			if (m == 0)
+				printf("%d, ", result);
+			else
+			{
+				printf("%2d", result);
+				if (m != 0)
+					printf(", ");
+			}
+		}
+		printf("\n");
+	}
 }
