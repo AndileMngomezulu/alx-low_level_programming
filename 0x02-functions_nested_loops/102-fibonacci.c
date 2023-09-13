@@ -12,7 +12,7 @@ int main(void)
 	unsigned long int next;
 	int x;
 
-	printf("%lu", term1);
+	printf("%lu, ", term1);
 	for (x = 1 ; x < 50 ; x++)
 	{
 		printf("%lu", term2);
