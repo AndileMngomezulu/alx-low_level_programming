@@ -1,14 +1,13 @@
-#include "lists.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
-#include <stddef.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
-  * print_list - rints all the elements of a list_t list
-  * @h: name of the list
-  * Return: number of nodes
-  */
+* print_list - check the code for Holberton School students.
+* @h: name of the list
+* Return: the number of nodes.
+*/
 size_t print_list(const list_t *h)
 {
 	int count = 0;
