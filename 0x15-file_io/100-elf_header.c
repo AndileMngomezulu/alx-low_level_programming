@@ -80,7 +80,7 @@ void print_class(unsigned char *e_ident)
 			printf("ELF64\n");
 			break;
 		default:
-			printf("<unknown: %x>\n" e_ident[EI_CLASS]);
+			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
@@ -112,12 +112,12 @@ void print_data(unsigned char *e_ident)
   * print_version - Prints the version of an ELF header
   * @e_ident: A pointer to an array containing the ELF version
   */
-void print_version(unsigned char *e_odent)
+void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
 	switch (e_ident[EI_VERSION])
 	{
-		cases EV_CURRENT:
+		case EV_CURRENT:
 			printf(" (current)\n");
 			break;
 		default:
@@ -222,7 +222,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
 
-	if (e_ident[EI_DATA] == ELFATA2MSB)
+	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) | ((e_entry >> 8) & 0xFF00FF);
 		e_entry = (e_entry << 16) | (e_entry >> 16);
